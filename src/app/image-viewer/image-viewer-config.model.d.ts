@@ -5,16 +5,14 @@ export interface ImageViewerConfig {
     wheelZoom?: boolean;
     allowFullscreen?: boolean;
     allowKeyboardNavigation?: boolean;
-
     btnShow?: {
-      zoomIn?: boolean;
-      zoomOut?: boolean;
-      rotateClockwise?: boolean;
-      rotateCounterClockwise?: boolean;
-      next?: boolean;
-      prev?: boolean;
+        zoomIn?: boolean;
+        zoomOut?: boolean;
+        rotateClockwise?: boolean;
+        rotateCounterClockwise?: boolean;
+        next?: boolean;
+        prev?: boolean;
     };
-
     btnIcons?: {
         zoomIn?: string;
         zoomOut?: string;
@@ -24,21 +22,13 @@ export interface ImageViewerConfig {
         prev?: string;
         fullscreen?: string;
     };
-
-    customBtns?: Array<
-      {
+    customBtns?: Array<{
         name: string;
         icon: string;
-      }
-    >;
+    }>;
 }
-
-export class CustomEvent {
-  name: string;
-  imageIndex: number;
-
-  constructor(name, imageIndex) {
-    this.name = name;
-    this.imageIndex = imageIndex;
-  }
+export declare class CustomEvent {
+    name: string;
+    imageIndex: number;
+    constructor(name: any, imageIndex: any);
 }
