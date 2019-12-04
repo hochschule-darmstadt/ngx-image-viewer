@@ -14,7 +14,7 @@ export class ToggleFullscreenDirective implements OnChanges {
     ngOnChanges() {
         if (this.isFullscreen && screenfull.enabled) {
             screenfull.request(this.el.nativeElement);
-        } else if (screenfull.enabled) {
+        } else if (screenfull.enabled && (document['fullscreenElement'] || document['webkitFullscreenElement'] || document['mozFullScreenElement'])) {
             screenfull.exit();
         }
     }
